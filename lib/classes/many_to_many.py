@@ -127,4 +127,5 @@ class Visitor:
         return list({trip.national_park for trip in self.trips()})
     
     def total_visits_at_park(self, park):
-        pass
+        visit = [trip.national_park for trip in self.trips() if trip.national_park == park]
+        return len(visit)
